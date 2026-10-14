@@ -1,6 +1,6 @@
 {
   "name": "agentic-checkout",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Stripe Payment Links creation and status checks for Node.js and TypeScript, with dry-run CLI and Model Context Protocol tools.",
   "keywords": [
     "stripe",
