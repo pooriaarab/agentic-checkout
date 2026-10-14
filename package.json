@@ -1,16 +1,20 @@
 {
   "name": "agentic-checkout",
   "version": "0.1.1",
-  "description": "Create Stripe Checkout payment links with a dry-run CLI and MCP agent.",
+  "description": "Stripe Payment Links creation and status checks for Node.js and TypeScript, with dry-run CLI and Model Context Protocol tools.",
   "keywords": [
     "stripe",
+    "stripe-payment-links",
     "stripe-checkout",
-    "checkout",
     "payment-link",
-    "payment",
+    "payments",
+    "typescript",
+    "nodejs",
     "cli",
     "mcp",
-    "agent"
+    "model-context-protocol",
+    "dry-run",
+    "zod"
   ],
   "license": "MIT",
   "author": "Pooria Arab",
