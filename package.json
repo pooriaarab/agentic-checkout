@@ -1,21 +1,60 @@
 {
   "name": "agentic-checkout",
-  "version": "0.1.0",
-  "description": "Create Stripe Checkout payment links with dry runs by default.",
-  "keywords": ["stripe", "checkout", "payment-link", "cli", "mcp"],
+  "version": "0.1.1",
+  "description": "Create Stripe Checkout payment links with a dry-run CLI and MCP agent.",
+  "keywords": [
+    "stripe",
+    "stripe-checkout",
+    "checkout",
+    "payment-link",
+    "payment",
+    "cli",
+    "mcp",
+    "agent"
+  ],
   "license": "MIT",
   "author": "Pooria Arab",
-  "repository": {"type":"git","url":"https://github.com/pooriaarab/agentic-checkout.git"},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pooriaarab/agentic-checkout.git"
+  },
   "type": "module",
-  "engines": {"node":">=18"},
-  "files": ["dist"],
-  "publishConfig": {"access":"public"},
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "mcpName": "io.github.pooriaarab/agentic-checkout",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "exports": {".": {"types":"./dist/index.d.ts","import":"./dist/index.js"}},
-  "bin": {"agentic-checkout":"./dist/cli.js","agentic-checkout-mcp":"./dist/mcp-bin.js"},
-  "scripts": {"build":"tsup","typecheck":"tsc --noEmit","test":"vitest run","clean":"rm -rf dist"},
-  "dependencies": {"@modelcontextprotocol/sdk":"^1.12.0","zod":"^3.25.0"},
-  "devDependencies": {"@types/node":"^22.0.0","tsup":"^8.0.0","typescript":"^5.6.0","vitest":"^3.0.0"}
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "agentic-checkout": "./dist/cli.js",
+    "agentic-checkout-mcp": "./dist/mcp-bin.js"
+  },
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.6.0",
+    "vitest": "^3.0.0"
+  }
 }

@@ -1,6 +1,10 @@
 # agentic-checkout
 
-Create Stripe Checkout payment links. Dry run is the default.
+Create Stripe Checkout payment links with Stripe. This CLI and MCP agent use a dry run by default, so the default command exits 0 without calling the network.
+
+| Brand | Environment key | Live command |
+| --- | --- | --- |
+| Stripe | `STRIPE_SECRET_KEY` | `agentic-checkout create --price price_123 --live` |
 
 ## Install
 
@@ -16,28 +20,27 @@ This creates a preview. It does not call Stripe.
 npx agentic-checkout create --price price_123
 ```
 
-## Three uses
-
-### CLI
+## CLI
 
 Add `--live` to call Stripe. Set `STRIPE_SECRET_KEY` first.
 
 ```bash
 agentic-checkout create --price price_123 --live
-agentic-checkout status --id plink_123
+agentic-checkout status --id plink_123 --live
 ```
 
-### Library
+## Library
 
 ```ts
 import { createPaymentLink } from "agentic-checkout";
+
 const link = await createPaymentLink({ priceId: "price_123" });
 ```
 
-### MCP
+## MCP
 
 ```bash
 npx agentic-checkout mcp
 ```
 
-Use `create_payment_link` and `get_payment_link_status`. Both dry run unless `dryRun` is false.
+Use `create_payment_link` and `get_payment_link_status`. Both dry run unless `dryRun` is `false`.
